@@ -7,7 +7,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'rust_test_01'",
+            "name": "Launch",
+            "program": "${workspaceFolder}/target/debug/test",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "default build",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug main.rs",
             "cargo": {
                 "args": [
                     "build",
@@ -25,16 +34,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'rust_test_01'",
+            "name": "Unit Debug",
             "cargo": {
                 "args": [
-                    "test",
-                    "--no-run",
-                    "--bin=rust_test_01",
-                    "--package=rust_test_01"
+                    "build",
+                    "--bin=my_test",
+                    "--package=my_test"
                 ],
                 "filter": {
-                    "name": "rust_test_01",
+                    "name": "my_test",
                     "kind": "bin"
                 }
             },
@@ -44,19 +52,20 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug selected unit test",
+            "name": "cargo test",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
+                    "--package=file:///home/ylx/RUST/rust_test_01/target/debug/deps/my_test"
                 ],
                 "filter": {
-                    "name": "rust_test_01",
+                    "name": "my_test",
                     "kind": "lib"
                 }
             },
-            "args": ["${selectedText}"],
+            "args": [],
             "cwd": "${workspaceFolder}"
-        },
+        }
     ]
 }

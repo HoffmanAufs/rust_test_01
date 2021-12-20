@@ -10,7 +10,7 @@ pub fn bad_add(a: i32, b: i32)->i32{
 macro_rules! my_assert_eq {
     ($l:expr, $r:expr) => {
         if ($l== $r){
-            println!("eq");
+            println!("eq2");
         }
         else{
             println!("ne");
@@ -19,7 +19,7 @@ macro_rules! my_assert_eq {
 }
 
 #[cfg(test)]
-mod tests{
+mod tests_a{
     use super::*;
 
     #[test]

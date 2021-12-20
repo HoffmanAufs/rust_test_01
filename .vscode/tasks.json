@@ -4,8 +4,17 @@
 		{
 			// "label": "Rust: cargo run - rust_test_01",
 			"label": "default run",
-			"type": "cargo",
-			"subcommand": "run",
+			"command": "cargo",
+			"args": ["run", "-p", "prj-01"],
+			"problemMatcher": [
+				"$rustc"
+			],
+		},
+		{
+			// "label": "Rust: cargo run - rust_test_01",
+			"label": "default build",
+			"command": "cargo",
+			"args": ["build", "-p", "prj-01"],
 			"problemMatcher": [
 				"$rustc"
 			],
