@@ -1,4 +1,4 @@
-use std::collections::BTreeMap;
+tuse std::collections::BTreeMap;
 use codec::{Encode, Decode};
 
 fn test01(){
@@ -174,6 +174,10 @@ fn test10(){
     let v = vec![Some(0), Some(0), Some(1), Some(2), Some(0)];
     let r = v.iter().filter_map(|v|v.as_ref()).fold(0, |r, &x| if x == 0 {r+1} else {r});
     println!("{}", r);
+}
+
+fn test11(){
+
 }
 
 fn main(){
